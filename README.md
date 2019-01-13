@@ -2,10 +2,11 @@
 
 Is it possible, advisable, sensible to describe vector and matrix
 operations using Constraint Logic Programming (CLP) techniques? That is,
-since vectors and matrices are basically multiple real numbers, their
-operators amount to constrained relationships between real numbers and
-hence open to CLP over reals. The simple answer is yes, CLP(V) lets you
-express vector operators using real-number constraints.
+since vectors and matrices are basically columns and rows of
+real-numeric scalars, their operators amount to constrained
+relationships between real numbers and hence open to the application of
+CLP over reals. The simple answer is yes, CLP(V) lets you express vector
+operators using real-number constraints.
 
 Contraint logic adds some important features to vector operations.
 Suppose for instance that you have a simple addition of two vectors, a
