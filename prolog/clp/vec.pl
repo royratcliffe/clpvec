@@ -3,6 +3,20 @@
               vec_scale/3               % ?Scalar, ?U, ?V
           ]).
 
+/** <module> Vectors
+
+"The  introduction  of  numbers   as   coordinates    is   an   act   of
+violence."--Hermann Weyl, 1885-1955
+
+Vectors are just lists of numbers, i.e.  scalars. These scalars apply to
+arbitrary abstract dimensions. For example, a two-dimensional vector [1,
+2] applies two scalars, 1 and 2, to  dimensional units _i_ and _j_; also
+known as the basis vectors for the coordinate system.
+
+@author Roy Ratcliffe <roy@ratcliffe.me>
+
+*/
+
 :- use_module(library(clpr)).
 
 %!  vec_translate(?U, ?V, ?W) is nondet.
