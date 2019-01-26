@@ -1,6 +1,7 @@
 :- module(clp_vec,
           [   vec_translate/3,          % ?U, ?V, ?W
-              vec_scale/3               % ?Scalar, ?U, ?V
+              vec_scale/3,              % ?Scalar, ?U, ?V
+              vec_rotate/3
           ]).
 
 /** <module> Vectors
@@ -37,3 +38,19 @@ vec_scale(_, [], []).
 vec_scale(Scalar, [H0|T0], [H|T]) :-
     {H =:= Scalar * H0},
     vec_scale(Scalar, T0, T).
+
+%!  vec_rotate(?Angle, ?U, ?V) is nondet.
+%
+%   Rotates vector U by Angle in radians, unifying the result with V.
+%   Positive angles rotate anti-clockwise, negative clockwise.
+%
+%   @arg Angle to rotate by, in radians.
+%   @arg U vector to rotate from.
+%   @arg V vector to rotate to.
+
+vec_rotate(Angle, [X0, Y0], [X, Y]) :-
+    {   Cos =:= cos(Angle),
+        Sin =:= sin(Angle),
+        X =:= X0 * Cos - Y0 * Sin,
+        Y =:= X0 * Sin + Y0 * Cos
+    }.
