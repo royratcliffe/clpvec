@@ -27,4 +27,7 @@ two, you can ask for the missing vector.
 
 Note also that the predicate answers non-deterministically with
 back-tracking until no alternative answer exists. This presumes that
-alternatives could exist at least in theory if not in practice.
+alternatives could exist at least in theory if not in practice. The
+trailing choice-points remain.
+
+Same goes for vector scaling, dot product, etc.
